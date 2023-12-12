@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="test">
+    <meta name="keywords" content="login mikrotik">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>LOGN</title>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script>
+        /* Add "https://api.ipify.org?format=json" statement
+       this will communicate with the ipify servers in
+       order to retrieve the IP address $.getJSON will
+       load JSON-encoded data from the server using a
+       GET HTTP request */
+ 
+        $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+ 
+                // Setting text of element P with id gfg
+                $("#gfg").html(data.ip);
+            })
+    </script>
+</head>
+<body>
+    <div class="login-box">
+       <p>Your IP: <p id="gfg"></p></p>
+        <p style="font-size: 2rem; color: #00ff00; margin: 20px;">TAZAKKA-WIFI</p>
+        <!--<img src="logo.png" class="logo">-->
+         <h1 class="neonText">LOGIN</h1>       	
+<!--starmik-->
+ $(if chap-id)
+ <form name="sendin" action="$(link-login-only)" method="post">
+     <input type="hidden" name="username" />
+     <input type="hidden" name="password" />
+     <input type="hidden" name="dst" value="$(link-orig)" />
+     <input type="hidden" name="popup" value="true" />
+ </form>
+ <script type="text/javascript" src="/md5.js"></script>
+ <script type="text/javascript">
+ <!--
+     function doLogin() {
+     document.sendin.username.value = document.login.username.value;
+     document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+     document.sendin.submit();
+     return false;
+     }
+ //-->
+ </script>
+$(endif)
+<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                 <input type="hidden" name="dst" value="$(link-orig)" />
+                 <input type="hidden" name="popup" value="true" />
+                 <div id="form-login">
+                 <div id="form-field-wrap">
+                 
+                 <input type="text" class="text-box" id="username-login" name="username" placeholder="Username" required><br /><br />
+                 <input type="password" class="text-box"  id="pass-login" name="password" placeholder="Password" required><br /><br />
+                 <input type="hidden" id="tsel" name="tsel" value="8">
+                 </div>
+                 
+                 <input type="submit" value="LOGIN" class="btn" />
+                 
+                 </div>
+<!--end mik-->                    
+<div style="color: #c1c1c1; font-size: 8px"></div>
+<center>$(if error)<br /><div style="color: #FF8080; font-size: 8px">$(error)</div>$(endif)</center>
+
+
+<script type="text/javascript">
+<!--
+document.login.username.focus();
+//-->
+</script>
+
+
+</form>
+<h2><marquee direction="right" behavior="alternate"  style="border-top:2px solid rgb(180, 76, 201, 0.575);border-radius: 20px; width: 100%;">2023 &copy;Copyright by Yusup</marquee></h2>
+    </div>
+<!--endmik-->
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+
+
+*,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+body {
+    cursor: url("cursor.png"), auto;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    height: 100vh;
+    background-image: url(1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 20s infinite ease-in-out;
+}
+/*.bg {
+    height: 100vh;
+    background-image: url(1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 20s infinite ease-in-out;
+}*/
+.login-box {
+    border-radius: 10px;
+    background: transparent;
+    overflow: hidden;
+    border: 2px solid #fff;
+    width: 45vh;
+    border: 2px solid rgba(180, 76, 201, 0.575);
+    backdrop-filter: blur(20px);
+}
+.logo{
+    width: 150px;
+}
+.text-box {
+    overflow: hidden;
+    margin: 10px;
+    width: 95%;
+    size: 20px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: rgba(255, 255, 255, .2);
+}
+.text-box input{
+    border: none;
+    outline: none;
+}
+.text-box input::placeholder{
+    color: #fff;
+}
+.btn {
+    margin-bottom: 10px;
+    background-color: rgb(211, 67, 255);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+    padding: 10px;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color: #00ff00;
+}
+.cek-ip {
+    border-radius: 10px;
+    background: transparent;
+    overflow: hidden;
+    border: 2px solid #fff;
+    width: 20vh;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+}
+p {
+    color: aqua;
+}
+h2 {
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+.neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: #ff0202;}
+    @keyframes flicker {
+    
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      
+            text-shadow:
+            0 0 4px #fff,
+            0 0 11px #ddd12c,
+            0 0 19px #fff,
+            0 0 40px rgb(206, 214, 90),
+            0 0 80px rgb(232, 248, 4),
+            0 0 90px rgb(38, 243, 250),
+            0 0 100px rgb(218, 97, 207),
+            0 0 150px rgb(212, 0, 255);
+        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+      }
+/*
+@keyframes change {
+    0% {
+        background-image: url(1.png);
+    }
+    20% {
+        background-image: url(2.png);
+    }
+    40% {
+        background-image: url(3.png);
+    }
+    60% {
+        background-image: url(4.png);
+    }
+    80% {
+        background-image: url(5.png);
+    }
+    0% {
+        background-image: url(6.png);
+    }
+}
+*/
+
+.layers {
+    position: relative;
+  }
+  
+  .layers::before,
+  .layers::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 110%;
+    z-index: -1;
+  }
+  
+  .layers::before {
+    top: 10px;
+    left: 15px;
+    color: #e0287d;
+  }
+  
+  .layers::after {
+    top: 5px;
+    left: -10px;
+    color: #1bc7fb;
+  }
+  .glitch span {
+    animation: paths 5s step-end infinite;
+  }
+  
+  .glitch::before {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 8s step-end infinite, movement 10s step-end infinite;
+  }
+  
+  .glitch::after {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 7s step-end infinite, movement 8s step-end infinite;
+  }
+  .hero {
+    font-size: clamp(40px, 10vw, 100px);
+    line-height: 1;
+    display: inline-block;
+    color: #fff;
+    z-index: 2;
+    letter-spacing: 1px;
+    filter: drop-shadow(0 1px 2px);
+  }    
